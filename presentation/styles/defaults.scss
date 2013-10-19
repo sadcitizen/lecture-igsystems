@@ -1,0 +1,83 @@
+$color: #cc0000;
+$narrow: 'PT Sans Narrow';
+$sans: 'PT Sans';
+$serif: 'PT Serif';
+
+$white: #ffffff;
+$azure: #40a4f0;
+$blue: #005494;
+$beige: #ebe8df;
+$gray: #6e6e6e;
+$light-gray: #a7a9ac;
+$dark: #323232;
+$turquoise: #1abc9c;
+$emerald: #2ecc71;
+$peter_river: #3498db;
+$amethyst: #9b59b6;
+$wet_asphalt: #34495e;
+$green_sea: #16a085;
+$nephritis: #27ae60;
+$belize_hole: #2980b9;
+$wisteria: #8e44ad;
+$midnight_blue: #2c3e50;
+$sun_flower: #f1c40f;
+$carrot: #e67e22;
+$alizarin: #e74c3c;
+$clouds: #ecf0f1;
+$concrete: #95a5a6;
+$orange: #f39c12;
+$pumpkin: #d35400;
+$pomegranade: #c0392b;
+$silver: #bdc3c7;
+$asbestos: #7f8c8d;
+
+// Layout
+$top:70px;     // Top padding above slide content
+$left:100px;    // Left slide content padding
+$right:100px;    // Right slide content padding
+$break:1180px;  // Window width for small thumbnails to appear
+$ratio:'';
+
+// Slide Dimentions
+$width:1024px;
+$height:640px;
+
+@if $height == 640px {
+	$ratio:'16x10';
+}
+@if $height == 768px {
+	$ratio:'4x3';
+	$top:$top + 16px;
+}
+
+// Mixins
+@mixin retina {
+	@media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi) {
+		@content;
+		}
+	}
+@mixin tab-size($n) {
+	-moz-tab-size:$n;
+	-o-tab-size:$n;
+	tab-size:$n;
+	}
+@mixin transform($n) {
+	-webkit-transform:$n;
+	-moz-transform:$n;
+	-ms-transform:$n;
+	-o-transform:$n;
+	transform:$n;
+	}
+@mixin transform-origin($n) {
+	-webkit-transform-origin:$n;
+	-moz-transform-origin:$n;
+	-ms-transform-origin:$n;
+	-o-transform-origin:$n;
+	transform-origin:$n;
+	}
+@mixin transition($n) {
+	-webkit-transition:$n;
+	-moz-transition:$n;
+	-o-transition:$n;
+	transition:$n;
+	}
