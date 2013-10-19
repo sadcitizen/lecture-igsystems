@@ -1,4 +1,3 @@
-lecture-igsystems
+Тренинг по frontend-разработке для компании Ingenius Systems
 =================
 
-Материалы тренинга по фронтэнд-разработке для компании Ingenius Systems
