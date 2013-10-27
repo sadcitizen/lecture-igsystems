@@ -43,8 +43,13 @@
 		<h2>План</h2>
 		<ol>
 			<li>Правила хорошего тона</li>
+			<li>Организация кода</li>
 			<li>Особенности языка Javascript</li>
-			<li>Работа с DOM</li>
+			<li>Работа с DOM (Отделение логики от представления)</li>
+			<li>Архитектура приложения: базовые принципы, модульность</li>
+			<li>Коммуникация</li>
+			<li>Взаимодействие с сервером</li>
+			<li>Управление памятью</li>
 		</ol>
 	</div>
 </section>
@@ -56,10 +61,49 @@
 	</div>
 </section>
 
+<section class="slide">
+	<div>
+		<h2>Соглашения по стилю</h2>
+		<ol>
+			<li>
+				<a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google JavaScript Style Guide</a>
+			</li>
+			<li>
+				<a href="http://javascript.crockford.com/code.html">Code Conventions for the JavaScript Programming Language (by Douglas Crockford)</a>
+			</li>
+			<li>
+				<a href="http://contribute.jquery.org/style-guide/js/">jQuery's JavaScript Style Guide</a>
+			</li>
+			<li>
+				<a href="https://github.com/rwaldron/idiomatic.js/">Principles of Writing Consistent, Idiomatic JavaScript</a>
+			</li>
+		</ol>
+	</div>
+</section>
+
+<section class="slide cover bright section">
+	<div>
+		<h2>Организация кода</h2>
+	</div>
+</section>
+
 <section class="slide cover bright section">
 	<div>
 		<h2>Особенности языка</h2>
 		<img src="images/grabli.png"/>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Глобальная область видимости</h2>
+		<ol>
+			<li>Конфликты переменных в вашем коде</li>
+			<li>Конфликты ваших переменных и переменных в подключаемых библиотеках</li>
+			<li>Конфликты ваших переменных и переменных в аддонах браузера</li>
+		</ol>
+		<p>Ваша переменная может быть попросту переопределена.</p>
+		<p>Лекарство: IIFE и модули.</p>
 	</div>
 </section>
 
@@ -72,34 +116,18 @@
 
 <section class="slide">
 	<div>
-		<h2>Header</h2>
-
-		<p>Typewriter etsy messenger bag <a href="">fingerstache</a>, aesthetic vinyl semiotics twee
-			<strong>DIY</strong> forage chillwave. Thundercats ennui messenger bag, <em>squid</em> carles chillwave
-			shoreditch pickled cliche <b>letterpress</b>. DIY beard locavore <i>occupy</i> salvia, whatever
-			single-origin <code>coffee</code> fanny pack 3 wolf moon typewriter gastropub kale chips. Ennui keffiyeh
-			thundercats jean shorts biodiesel. Terry richardson, swag blog locavore umami vegan helvetica. Fingerstache
-			kale chips.</p>
-		<footer>
-			Typewriter etsy messenger bag fingerstache.
-		</footer>
+		<h2>Перекомпоновка и перерисовка</h2>
+		<p>
+			<strong>Перекомпоновка</strong> &mdash; это процесс реконструкции части дерева DOM, которая была затронута.
+			Причиной для перекомпоновки служит изменении геометрии элемента.
+		</p>
+		<p>
+			<strong>Перерисовка</strong> &mdash; это процесс повторного  отрисовывания элементов части дерева DOM, которая была затронута.
+			Если при изменении не была затронута геометрия элемента, то выполняется только перерисовка.
+		</p>
 	</div>
 </section>
-<section class="slide">
-	<div>
-		<h2>Header</h2>
-
-		<p>DIY beard locavore occupy salvia, whatever single-origin coffee fanny pack 3 wolf moon typewriter gastropub
-			kale chips. Ennui keffiyeh thundercats jean shorts biodiesel.</p>
-
-		<p>Typewriter etsy messenger bag fingerstache, aesthetic vinyl semiotics twee DIY forage chillwave. Thundercats
-			ennui messenger bag, squid carles chillwave shoreditch pickled cliche letterpress.</p>
-		<footer>
-			DIY beard locavore occupy salvia, whatever single-origin coffee fanny pack 3 wolf moon typewriter gastropub
-			kale chips. Ennui keffiyeh thundercats jean shorts biodiesel.
-		</footer>
-	</div>
-</section>
+<!--
 <section class="slide">
 	<div>
 		<h2>Lists in English typography</h2>
@@ -280,7 +308,7 @@
 		<img src="images/wall.png"/>
 	</div>
 </section>
-
+ -->
 <div class="progress">
 	<div></div>
 </div>
