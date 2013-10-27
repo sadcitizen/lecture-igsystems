@@ -6,7 +6,7 @@ body {
 	counter-reset: slide;
 	font: 24px/2 $sans, sans-serif;
 }
-	
+
 a {
 	text-decoration: none;
 }
@@ -16,12 +16,12 @@ a {
 	margin: 0 0 60px;
 	padding: 0 50px 0 0;
 	color: $clouds;
-	
+
 	h1 {
 		font: 50px $sans, sans-serif;
 		font-weight: bold;
 	}
-	
+
 	a {
 		color: $pomegranade;
 
@@ -109,24 +109,42 @@ a {
 	// Text
 	p {
 		margin:0 0 48px;
-		}
+	}
 	a {
 		border-bottom:0.1em solid;
 		color: $pomegranade;
-		}
+	}
 	b, strong {
 		font-weight:bold;
-		}
+	}
 	i, em {
 		font-style:italic;
-		}
+	}
 	kbd, code, samp {
 		padding:2px 7px;
 		background:rgba(#000, 0.1);
 		@include tab-size(4);
-		line-height:1;
-		font-family:'Anka Coder', monospace;
+		font: normal 18px/1 'Anka Coder', monospace;
+	}
+
+	dl {
+		overflow: hidden;
+
+		dt {
+			float: left;
+			display: block;
+			width: 20%;
+			font-weight: bold;
+			color: $gray;
 		}
+
+		dd {
+			float: left;
+			display: block;
+			width: 80%;
+		}
+	}
+
 	// Quote
 	blockquote {
 		font-style:italic;
@@ -137,13 +155,13 @@ a {
 			content:'\201C';
 			line-height:1;
 			font-size:200px;
-			}
+		}
 		& + figcaption {
 			margin:-48px 0 48px;
 			font-style:italic;
 			font-weight:bold;
-			}
 		}
+	}
 	// Lists
 	ol, ul {
 		margin:0 0 48px;
@@ -254,6 +272,11 @@ a {
 				color: $pomegranade;
 			}
 		}
+		&.section {
+			h2 {
+				text-align: center;
+			}
+		}
 
 		@mixin cover {
 			img, svg, video,
@@ -303,6 +326,31 @@ a {
 			@include transform(translateY(-50%));
 		}
 	}
+
+	&.title {
+		background: $white;
+
+		h1 {
+			color:$pomegranade;
+			font-size: 100px;
+			line-height: 120px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		h3 {
+			font-size: 50px;
+			line-height: 60px;
+			text-align: center;
+			margin-top: 100px;
+
+			.date {
+				font-style: italic;
+				color: $gray;
+			}
+		}
+	}
+
 	// Place
 	.place {
 		position:absolute;
