@@ -102,6 +102,26 @@
 
 <section class="slide">
 	<div>
+		<h2>Область видимости</h2>
+		<p>Новая область видимости создается только для функций, а не для блоков <code>{ }</code>.</p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>IIFE &mdash; Immediately Invoked Function Expression</h2>
+		<pre>
+			<code>(function($, window, document, undefined) {</code>
+			<code>    'use strict';</code>
+			<code>    ...</code>
+			<code>})(jQuery, this, document);</code>
+		</pre>
+		<p>Образует изолированную область видимости.</p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
 		<h2>Глобальная область видимости</h2>
 		<ol>
 			<li>Конфликты переменных в вашем коде</li>
@@ -151,6 +171,132 @@
 		</ol>
 	</div>
 </section>
+
+<section class="slide">
+	<div>
+		<h2>Модульная структура: Require.js</h2>
+        <p>
+	        <strong>Require.js</strong> &mdash; javascript-библиотека, которая реализует подход Asynchronous Module Definition.
+		</p>
+		<ol>
+			<li><strong>define()</strong> &mdash; описание модуля; </li>
+			<li><strong>require()</strong> &mdash; подтягивание зависимости. </li>
+		</ol>
+		<p><a href="http://requirejs.org/">http://requirejs.org/</a> v2.1.9 / forks: 742 / stars: 4730</p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Модульная структура: Require.js</h2>
+		<pre>
+			<code>define([<mark>'jquery'</mark>], function ($) {</code>
+			<code>    return {</code>
+			<code>        foo: 'bar'</code>
+			<code>    }</code>
+			<code>});</code>
+			<code></code>
+		</pre>
+		<p>Определение модуля.</p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Модульная структура: Require.js</h2>
+		<pre>
+			<code>define(function (<mark>require</mark>) {</code>
+			<code>    <mark class="important">var $ = require('jquery');</mark></code>
+			<code>    return {</code>
+			<code>        foo: $('.bar').data().id</code>
+			<code>    }</code>
+			<code>});</code>
+			<code></code>
+		</pre>
+		<p>Вызов зависимости.</p>
+	</div>
+</section>
+
+
+
+<section class="slide cover bright section">
+	<div>
+		<h2>Коммуникация</h2>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Коммуникация: пример</h2>
+		<pre>
+			<code>$('#someElement').on('someEvent', function () {</code>
+			<code>    <mark class="comment">//Тело обработчика</mark></code>
+			<code>});</code>
+			<code>...</code>
+			<code>$('#someElement').trigger('someEvent');</code>
+		</pre>
+		<p><strong>Анти-паттерн!</strong></p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Коммуникация: медиатор</h2>
+
+	</div>
+</section>
+
+<section class="slide cover bright section">
+	<div>
+		<h2>Взаимодействие с сервером</h2>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Как сократить время коммуникации клиента с сервером?</h2>
+		<ol>
+			<li>Отдавайте не разметку, а JSON. Разметка должна формироваться на клиенте.</li>
+			<li>Не отправляйте серверу лишние запросы. Пул ajax-запросов позволит получить клиенту только актуальные данные.</li>
+			<li>Не спрашивать у сервера то, что уже было получено ранее. Кешируйте.</li>
+		</ol>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Книжная полка</h2>
+		<ol>
+			<li><em>Дэвид Флэнаган</em> &mdash; JavaScript. Подробное руководство, 6-е издание.</li>
+			<li><em>Дуглас Крокфорд</em> &mdash; JavaScript. Сильные стороны.</li>
+			<li><em>Стоян Стефанов</em> &mdash; JavaScript. Шаблоны. </li>
+			<li><em>Николас Закас</em> &mdash; JavaScript. Оптимизация производительности. </li>
+			<li><em>Бер Бибо и Иегуда Кац</em> &mdash; jQuery. Подробное руководство по продвинутому JavaScript, 2-е издание.</li>
+		</ol>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>В закладки!</h2>
+		<ol>
+			<li><a href="http://shamansir.github.io/JavaScript-Garden/">JavaScript Garden</a></li>
+			<li><a href="http://jquery.page2page.ru">jquery.page2page.ru</a></li>
+			<li><a href="http://jsbooks.revolunet.com/">JS Books</a></li>
+			<li><a href="http://eloquentjavascript.net/contents.html">Eloquent JavaScript</a></li>
+			<li><a href="http://jqueryboilerplate.com/">jQuery Boilerplate</a></li>
+			<li><a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">Learning JavaScript Design Patterns</a> <em>by Addy Osmani</em></li>
+			<li><a href="http://chimera.labs.oreilly.com/books/1234000000262">Programming JavaScript Applications</a> <em>by Eric Elliott</em></li>
+		</ol>
+	</div>
+</section>
+
+<section class="slide shout">
+	<div>
+		<h2>Конец :)</h2>
+	</div>
+</section>
+
 <!--
 <section class="slide" lang="ru">
 	<div>
@@ -287,17 +433,7 @@
 		</pre>
 	</div>
 </section>
-<section class="slide shout">
-	<div>
-		<h2>
-			You Can<br>
-			Shout This Way
-		</h2>
-		<footer>
-			Typewriter etsy messenger bag fingerstache.
-		</footer>
-	</div>
-</section>
+
 <section class="slide shout up">
 	<div>
 		<h2>Sliding</h2>
