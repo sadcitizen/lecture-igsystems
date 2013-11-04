@@ -57,6 +57,7 @@
 		<ol>
 			<li>Правила хорошего тона</li>
 			<li>JavaScript is Evil</li>
+			<li>jQuery</li>
 			<!--<li>Организация кода</li>
 			<li>Особенности языка Javascript</li>
 			<li>Работа с DOM (Отделение логики от представления)</li>
@@ -193,6 +194,127 @@
 	</div>
 </section>
 
+<section class="slide" lang="ru">
+	<div>
+		<h2>Типы данных</h2>
+		<ul>
+			<li><strong>number</strong>;</li>
+			<li><strong>string</strong>;</li>
+			<li><strong>boolean</strong>;</li>
+			<li><strong>null</strong>;</li>
+			<li><strong>undefined</strong>;</li>
+			<li><strong>object</strong>.</li>
+		</ul>
+		<p>Все остальные типы (Array, Function, Date, Error и др.) &mdash; потомки типа <strong>object</strong>.</p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Определение типов</h2>
+
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Типы данных: number</h2>
+		<ul>
+			<li>Все числа представляются вещественными значениями (с плавающей точкой).</li>
+			<li>Допускается использование 16-ичных значений. Например, 255 = 0xff.</li>
+			<li>Допускается е-запись числа. Например, 6.03e23 = 6.03 * 10<sup>23</sup>.</li>
+			<li>Существую два специальных значения для бесконечности: <code>Infinity</code> и <code>-Infinity</code>.</li>
+			<li>Деление на ноль не вызовет ошибку, а в результате вернется одно из значений бесконечности.</li>
+			<li>При арифметических операциях с дробными числами могут возникать ошибки округления.</li>
+		</ul>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Типы данных: number и NaN</h2>
+		<p><strong>NaN</strong> (not a number) &mdash; специальное значение "не число".</p>
+		<ul>
+			<li>NaN не равно само себе, то есть <code>Nan === NaN</code> вернет <code>false</code>.</li>
+			<li>Для проверки на NaN существует специальная функция <code>isNaN()</code>.</li>
+			<li><code>NaN</code> может быть получен в результате следующих операций:
+				<ul>
+					<li>деление <code>0/0</code>;</li>
+					<li>деление <code>Infinity/Infinity</code>;</li>
+					<li>извлечение квадратного корня из отрицательного числа;</li>
+					<li>сложение числового значения с нечисловым.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Типы данных: null</h2>
+		<p><strong>null</strong> &mdash; специальный "пустой" объект. </p>
+		<p>Оператор <code>typeof</code> для <code>null</code> вернет значение <code>"object"</code>.</p>
+		<p><code>null</code> следует понимать как ожидаемое отсутствие значения или как пустое значение.</p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Типы данных: undefined</h2>
+		<p><strong>undefined</strong> &mdash; указывает на полное отсутствие какого-либо значения. </p>
+		<p>Оператор <code>typeof</code> для <code>undefined</code> вернет значение <code>"undefined"</code>.</p>
+		<p><code>null</code> следует понимать как неожиданное или ошибочное отсутствие значения.</p>
+		<p>В стандарте ECMAScript 3 <code>undefined</code> является переменной, которую можно было переопределить. В стандарте ECMAScript 5 <code>undefined</code> стала доступна только для чтения.</p>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Falsy-значения</h2>
+		<ul>
+			<li><strong>false</strong> &mdash; ложь;</li>
+			<li><strong>0</strong> &mdash; ноль (+0 и -0);</li>
+			<li><strong>''</strong> &mdash; пустая строка;</li>
+			<li><strong>null</strong>;</li>
+			<li><strong>undefined</strong>;</li>
+			<li><strong>NaN</strong>.</li>
+		</ul>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Truthy-значения</h2>
+		<ul>
+			<li><strong>true</strong> &mdash; истина; </li>
+			<li><strong>1</strong> &mdash; любое число, отличное от нуля;</li>
+			<li><strong>'false'</strong> &mdash; любая не пуская строка;</li>
+			<li><strong>function () {}</strong> &mdash; любая функция вне засимости от возвращаемого значения;</li>
+			<li><strong>[]</strong> или <strong>[0]</strong> &mdash; любой массив;</li>
+			<li><strong>{}</strong> &mdash; любой объект.</li>
+		</ul>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Объекты-обертки</h2>
+		<p>Обертка всегда <strong>правдива</strong>, даже если оборачивает лживое значение.</p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Объекты</h2>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Функции</h2>
+	</div>
+</section>
+
 <section class="slide">
 	<div>
 		<h2>Область видимости</h2>
@@ -231,6 +353,20 @@
 		<p>Лекарство: IIFE и модули.</p>
 	</div>
 </section>
+
+<section class="slide">
+	<div>
+		<h2>Операторы</h2>
+	</div>
+</section>
+
+<section class="slide cover bright section">
+	<div>
+		<h2>jQuery</h2>
+		<img src="images/dom.png"/>
+	</div>
+</section>
+
 <!--
 <section class="slide cover bright section">
 	<div>

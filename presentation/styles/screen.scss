@@ -11,6 +11,11 @@ a {
 	text-decoration: none;
 }
 
+sup {
+	font-size: 0.7em;
+	vertical-align: top;
+}
+
 .caption {
 	display: none;
 	margin: 0 0 60px;
@@ -107,7 +112,7 @@ a {
 	}
 	// Text
 	p {
-		margin:0 0 48px;
+		margin:0 0 30px;
 	}
 	a {
 		border-bottom:0.1em solid;
@@ -119,11 +124,17 @@ a {
 	i, em {
 		font-style:italic;
 	}
+
+	.notice {
+		font-style: italic;
+		color: $gray;
+	}
+
 	kbd, code, samp {
-		padding:2px 7px;
+		padding:2px 5px;
 		background:rgba(#000, 0.1);
 		@include tab-size(4);
-		font: normal 18px/1 'Anka Coder', monospace;
+		font: normal 24px/1 'Anka Coder', monospace;
 	}
 
 	dl {
@@ -147,6 +158,7 @@ a {
 	// Quote
 	blockquote {
 		font-style:italic;
+
 		&:before {
 			position:absolute;
 			margin:-50px 0 0 -100px;
@@ -160,6 +172,10 @@ a {
 			font-style:italic;
 			font-weight:bold;
 		}
+	}
+
+	figcaption {
+		text-align: right;
 	}
 	// Lists
 	ol, ul {
@@ -201,6 +217,8 @@ a {
 			background:none;
 			white-space:pre;
 			line-height:2;
+			font: normal 18px/2 'Anka Coder', monospace;
+
 			&:before {
 				position:absolute;
 				margin-left:-50px;
