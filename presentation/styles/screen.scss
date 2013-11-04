@@ -71,13 +71,12 @@ a {
 	// Number
 	&:after {
 		position:absolute;
-		right:0;
-		bottom:45px;
-		left:0;
+		right:45px;
+		top:45px;
 		color: $alizarin;
 		counter-increment:slide;
 		content:counter(slide);
-		text-align:center;
+		text-align:right;
 		line-height:1;
 		}
 	// Inner
@@ -275,6 +274,18 @@ a {
 		&.section {
 			h2 {
 				text-align: center;
+				font:55px/1 $sans, sans-serif;
+				font-weight: bold;
+				@include text-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
+			}
+
+			&.bottom-header {
+				h2 {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				}
 			}
 		}
 
@@ -336,6 +347,7 @@ a {
 			line-height: 120px;
 			font-weight: bold;
 			text-align: center;
+			@include text-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
 		}
 
 		h3 {
@@ -348,6 +360,10 @@ a {
 				font-style: italic;
 				color: $gray;
 			}
+		}
+
+		&:after {
+			top: -100px;
 		}
 	}
 

@@ -81,3 +81,9 @@ $height:640px;
 	-o-transition:$n;
 	transition:$n;
 	}
+
+@mixin text-shadow($n) {
+	-webkit-text-shadow: $n;
+    -moz-text-shadow: $n;
+    text-shadow: $n;
+}
