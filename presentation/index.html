@@ -212,7 +212,34 @@
 <section class="slide">
 	<div>
 		<h2>Определение типов</h2>
-
+		<table>
+			<tr>
+				<th>&nbsp;</th>
+				<th>typeof</th>
+				<th>$.type()</th>
+			</tr>
+			<tr>
+				<td>null</td>
+				<td>'object'</td>
+				<td>'null'</td>
+			</tr>
+			<tr>
+				<td>[]</td>
+				<td>'object'</td>
+				<td>'array'</td>
+			</tr>
+			<tr>
+				<td>new Date()</td>
+				<td>'object'</td>
+				<td>'date'</td>
+			</tr>
+			<tr>
+				<td>new RegExp()</td>
+				<td>'object'</td>
+				<td>'regexp'</td>
+			</tr>
+		</table>
+		<p>Для <code>boolean</code>, <code>number</code>, <code>string</code>, <code>undefined</code>, <code>function</code> и <code>{}</code> результаты одинаковы.</p>
 	</div>
 </section>
 
@@ -233,7 +260,7 @@
 <section class="slide" lang="ru">
 	<div>
 		<h2>Типы данных: number и NaN</h2>
-		<p><strong>NaN</strong> (not a number) &mdash; специальное значение "не число".</p>
+		<p><strong>NaN</strong> (not a number) &mdash; специальное значение "не число". Константа.</p>
 		<ul>
 			<li>NaN не равно само себе, то есть <code>Nan === NaN</code> вернет <code>false</code>.</li>
 			<li>Для проверки на NaN существует специальная функция <code>isNaN()</code>.</li>
@@ -299,7 +326,16 @@
 <section class="slide">
 	<div>
 		<h2>Объекты-обертки</h2>
+		<p>Для примитивных типов <code>number</code>, <code>string</code> и <code>boolean</code> определены объекты-обертки: <code>Number</code>, <code>String</code> и <code>Boolean</code>.</p>
+		<p>Обертки необходимы для того, чтобы мы могли применять методы для примитивных типов.</p>
+		<p>Всякий раз когда необходимо применить какой то метод к переменной примитивного типа, интерпретатор JavaScript преобразует ее к объекту. Этот объект будет наследовать все методы объекта-обертки. После обращения к методу вновь созданный объект уничтожается.</p>
 		<p>Обертка всегда <strong>правдива</strong>, даже если оборачивает лживое значение.</p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Приведение типов</h2>
 	</div>
 </section>
 
