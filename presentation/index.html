@@ -17,7 +17,7 @@
 <section class="slide title">
 	<div>
 		<h1>Frontend разработка</h1>
-		<h3>Семинар. <span class="date">8 ноября 2013 года.</span></h3>
+		<h3>Семинар. <span class="date">15 ноября 2013 года.</span></h3>
 	</div>
 </section>
 
@@ -56,12 +56,12 @@
 		<h2>План</h2>
 		<ol>
 			<li>Правила хорошего тона</li>
+			<li>Вёрстка</li>
 			<li>JavaScript is Evil</li>
-			<li>jQuery</li>
+			<li>Архитектура приложения</li>
+			<!--li>jQuery</li-->
 			<!--<li>Организация кода</li>
-			<li>Особенности языка Javascript</li>
 			<li>Работа с DOM (Отделение логики от представления)</li>
-			<li>Архитектура приложения: базовые принципы, модульность</li>
 			<li>Коммуникация</li>
 			<li>Взаимодействие с сервером</li>
 			<li>Управление памятью</li>-->
@@ -184,6 +184,89 @@
 				</ol>
 			</li>
 		</ul>
+	</div>
+</section>
+
+<section class="slide cover bright section">
+	<div>
+		<h2>Вёрстка</h2>
+		<img src="images/fuck-yeah.png"/>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Правила игры</h2>
+		<ul>
+			<li><strong>CSS</strong> &mdash; представление;</li>
+			<li><strong>JavaScript</strong> &mdash; поведение;</li>
+			<li><strong>HTML</strong> &mdash; структура и данные (<code>data-*</code>).</li>
+		</ul>
+	</div>
+</section>
+
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Bad practices</h2>
+		<ul>
+			<li>насыщенные селекторы (<code>.nav .header .right-header span {}</code>);</li>
+			<li>избыточные селекторы (<code>ul.nav {}</code>, <code>a.button {}</code>, <code>div.header {}</code>);</li>
+			<li>специфичные классы (<code>.f11_helv_r_blue_dot, .f13_helv_b_white_u</code>);</li>
+			<li>повторное определение свойства;</li>
+			<li>несемантические имена классов (<code>.search_box_1, .search_box_2</code>);</li>
+			<li>сброс значений от каскада.</li>
+		</ul>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Скорость селекторов</h2>
+		<ol>
+			<li>ID: <code>#header</code></li>
+			<li>Класс: <code>.header</code></li>
+			<li>Тип: <code>p</code></li>
+			<li>Соседний элемент: <code>h2 + p</code></li>
+			<li>Дочерний элемент: <code>ul > li</code></li>
+			<li>Вложенный элемент: <code>ul a</code></li>
+			<li>Общий селектор: <code>*</code></li>
+			<li>Атрибут: <code>[type="text"]</code></li>
+			<li>Псевдоклассы/-элементы: <code>a:hover</code></li>
+		</ol>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Методологии</h2>
+		<ul>
+			<li><a href="http://ru.bem.info/">БЭМ</a></li>
+			<li><a href="http://smacss.com/">SMACSS</a></li>
+			<li><a href="http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/">OOCSS</a></li>
+			<li><a href="https://github.com/operatino/MCSS">MCSS</a></li>
+		</ul>
+		<p>Эти методологии пропагандируют верстку абсолютно независимыми блоками</p>		
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>LESS Skeleton</h2>
+		<p><a href="https://github.com/instanceofpro/less-mixins">LESS Mixins</a> (GitHub)</p>
+		<p><a href="https://github.com/instanceofpro/less-skeleton">LESS Skeleton</a> (GitHub)</p>
+		<p>Слои:</p>
+		<ul>
+			<li><strong>Базовый</strong> &mdash; примеси, резеты, нормализация;</li>
+			<li><strong>Фреймворк</strong> &mdash; наборы для основных компонентов;</li>
+			<li><strong>Представление</strong> &mdash; независимые блоки.</li>
+		</ul>
+	</div>
+</section>
+
+<section class="slide cover bright section">
+	<div>
+		<img src="images/topic.png" />
 	</div>
 </section>
 
@@ -336,6 +419,13 @@
 <section class="slide">
 	<div>
 		<h2>Приведение типов</h2>
+		
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Операторы</h2>
 	</div>
 </section>
 
@@ -348,19 +438,6 @@
 <section class="slide">
 	<div>
 		<h2>Функции</h2>
-	</div>
-</section>
-
-<section class="slide">
-	<div>
-		<h2>Область видимости</h2>
-		<p>Новая область видимости создается только для функций, а не для блоков <code>{ }</code>.</p>
-	</div>
-</section>
-
-<section class="slide">
-	<div>
-		<h2>Замыкания</h2>
 	</div>
 </section>
 
@@ -390,56 +467,43 @@
 	</div>
 </section>
 
-<section class="slide">
-	<div>
-		<h2>Операторы</h2>
-	</div>
-</section>
-
-<section class="slide cover bright section">
-	<div>
-		<h2>jQuery</h2>
-		<img src="images/dom.png"/>
-	</div>
-</section>
-
-<!--
-<section class="slide cover bright section">
-	<div>
-		<h2>Работа с DOM</h2>
-		<img src="images/dom.png"/>
-	</div>
-</section>
-
-<section class="slide">
-	<div>
-		<h2>Перекомпоновка и перерисовка</h2>
-		<p>
-			<strong>Перекомпоновка</strong> &mdash; это процесс реконструкции части дерева DOM, которая была затронута.
-			Причиной для перекомпоновки служит изменении геометрии элемента.
-		</p>
-		<p>
-			<strong>Перерисовка</strong> &mdash; это процесс повторного  отрисовывания элементов части дерева DOM, которая была затронута.
-			Если при изменении не была затронута геометрия элемента, то выполняется только перерисовка.
-		</p>
-	</div>
-</section>
-
-<section class="slide cover bright section">
+<section class="slide cover dark section bottom-header">
 	<div>
 		<h2>Архитектура приложения</h2>
+		<img src="images/arc.png" />
 	</div>
 </section>
 
 <section class="slide">
 	<div>
-		<h2>Архитектура приложения: паттерны проектирования</h2>
+		<h2>Паттерны</h2>
 		<ol>
-			<li>Ennui keffiyeh thundercats</li>
-			<li>Jean shorts biodiesel</li>
-			<li>Terry richardson, swag blog</li>
-			<li>Before they sold out master</li>
+			<li>модуль;</li>
+			<li>синглтон*;</li>
+			<li>фабрика*;</li>
+			<li>наблюдатель;</li>
+			<li>фасад*;</li>
+			<li>декоратор*.</li>
 		</ol>
+		<p><strong>*</strong> &mdash; изучаем самостоятельно.</p>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2>Модуль</h2>
+		<pre>
+			<code>var myModule = function() {</code>
+			<code>	var _name = "";</code>
+			<code>	function setName(name) {</code>
+			<code>		_name = name;</code>
+			<code>	}</code>
+			<code>	function getName(name) {</code>
+			<code>		return name;</code>
+			<code>	}</code>
+			<code>	return { setName: setName, getName, getName }</code>
+			<code>}</code>
+		</pre>
 	</div>
 </section>
 
@@ -488,17 +552,9 @@
 	</div>
 </section>
 
-
-
-<section class="slide cover bright section">
-	<div>
-		<h2>Коммуникация</h2>
-	</div>
-</section>
-
 <section class="slide">
 	<div>
-		<h2>Коммуникация: пример</h2>
+		<h2>Наблюдатель</h2>
 		<pre>
 			<code>$('#someElement').on('someEvent', function () {</code>
 			<code>    <mark class="comment">//Тело обработчика</mark></code>
@@ -512,28 +568,18 @@
 
 <section class="slide">
 	<div>
-		<h2>Коммуникация: медиатор</h2>
-
+		<h2>Наблюдатель</h2>
+		<pre>
+			<code>var o = $({});</code>
+			<code>$.subscribe = o.on.bind(o);</code>
+			<code>$.unsubscribe = o.off.bind(o);</code>
+			<code>$.publish = o.trigger.bind(o);</code>
+		</pre>
+		<p>Простейшая реализация с помощью jQuery без привязки к DOM.</p>
+		<p>Подробные реализации паттернов: <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">Learning JavaScript Design Patterns</a></p>
 	</div>
 </section>
 
-<section class="slide cover bright section">
-	<div>
-		<h2>Взаимодействие с сервером</h2>
-	</div>
-</section>
-
-<section class="slide">
-	<div>
-		<h2>Как сократить время коммуникации клиента с сервером?</h2>
-		<ol>
-			<li>Отдавайте не разметку, а JSON. Разметка должна формироваться на клиенте.</li>
-			<li>Не отправляйте серверу лишние запросы. Пул ajax-запросов позволит получить клиенту только актуальные данные.</li>
-			<li>Не спрашивать у сервера то, что уже было получено ранее. Кешируйте.</li>
-		</ol>
-	</div>
-</section>
--->
 <section class="slide">
 	<div>
 		<h2>Книжная полка</h2>
@@ -568,147 +614,6 @@
 		<h2>Конец :)</h2>
 	</div>
 </section>
-<!--
-<section class="slide" lang="ru">
-	<div>
-		<h2>Lists in Russian typography</h2>
-		<ul>
-			<li>Ennui keffiyeh thundercats</li>
-			<li>Jean shorts biodiesel</li>
-			<li>Terry richardson, swag blog
-				<ol>
-					<li>Locavore umami vegan helvetica</li>
-					<li>Fingerstache kale chips</li>
-					<li>Keytar sriracha gluten-free</li>
-				</ol>
-			</li>
-			<li>Before they sold out master</li>
-		</ul>
-	</div>
-</section>
-<section class="slide">
-	<div>
-		<h2>Lists in English typography</h2>
-		<ol>
-			<li>Locavore umami vegan helvetica</li>
-			<li>Fingerstache kale chips</li>
-			<li>Keytar sriracha gluten-free</li>
-		</ol>
-		<ul>
-			<li>Ennui keffiyeh thundercats</li>
-			<li>Jean shorts biodiesel</li>
-			<li>Terry richardson, swag blog</li>
-		</ul>
-	</div>
-</section>
-<section class="slide">
-	<div>
-		<h2>Table</h2>
-		<table>
-			<tr>
-				<th scope="col">Locavore</th>
-				<th>Umami</th>
-				<th>Helvetica</th>
-				<th>Vegan</th>
-			</tr>
-			<tr>
-				<th scope="row">Fingerstache</th>
-				<td>Kale</td>
-				<td>Chips</td>
-				<td>Keytar</td>
-			</tr>
-			<tr>
-				<th scope="row">Sriracha</th>
-				<td>Gluten-free</td>
-				<td>Ennui</td>
-				<td>Keffiyeh</td>
-			</tr>
-			<tr>
-				<th scope="row">Thundercats</th>
-				<td>Jean</td>
-				<td>Shorts</td>
-				<td>Biodiesel</td>
-			</tr>
-			<tr>
-				<th scope="row">Terry</th>
-				<td>Richardson</td>
-				<td>Swag</td>
-				<td>Blog</td>
-			</tr>
-		</table>
-		<p>Typewriter etsy messenger bag fingerstache.</p>
-	</div>
-</section>
-
-<section class="slide">
-	<div>
-		<h2>Пример плохого кода</h2>
-		<pre>
-			<code>$(document).on('change', '#someId"]', function (e) {</code>
-			<code>    if (<mark>$(this)</mark>.is(':checked')) {</code>
-			<code>        <mark class="important">$('input[name="someName"]')</mark>.val(<mark>$(this)</mark>.data('name'));</code>
-			<code>        <mark class="important">$('input[name="someName"]')</mark>.attr('disabled', 'disabled');</code>
-			<code>        <mark class="important">$('input[name="someName"]')</mark>.trigger('focusout');</code>
-			<code>    } else {</code>
-			<code>        <mark class="important">$('input[name="someName"]')</mark>.removeAttr('disabled');</code>
-			<code>    }</code>
-			<code>});</code>
-		</pre>
-	</div>
-</section>
-
-<section class="slide">
-	<div>
-		<h2>Пример плохого кода: рефакторинг</h2>
-		<pre>
-			<code>$(document).on('change', '#someId"]', function (e) {</code>
-			<code>    var $someEl = $('input[name="someName"]'), $this = $(this);</code>
-			<code>    if ($this.is(':checked')) {</code>
-			<code>        $someEl</code>
-			<code>            .val($this.data('name'))</code>
-			<code>            .prop('disabled', true)</code>
-			<code>            .trigger('focusout');</code>
-			<code>    } else {</code>
-			<code>        $someEl.prop('disabled', false);</code>
-			<code>    }</code>
-			<code>});</code>
-		</pre>
-	</div>
-</section>
-
-<section class="slide">
-	<div>
-		<h2>Plain code listing</h2>
-		<pre><code>&lt;html lang="en"&gt;
-<mark>&lt;head&gt;</mark><mark class="comment">&lt;!--Comment--&gt;</mark>
-	&lt;title&gt;Shower&lt;/title&gt;
-	&lt;meta charset="<mark class="important">UTF-8</mark>"&gt;
-	&lt;link rel="stylesheet" href="s/screen.css"&gt;
-	&lt;script src="j/jquery.js"&gt;&lt;/script&gt;
-<mark>&lt;/head&gt;</mark>
-		</code>
-		</pre>
-	</div>
-</section>
-
-<section class="slide shout up">
-	<div>
-		<h2>Sliding</h2>
-	</div>
-</section>
-<section class="slide shout right">
-	<div>
-		<h2>Sliding</h2>
-	</div>
-</section>
-
-<section class="slide cover dark">
-	<div>
-		<h2>Frontend разработка</h2>
-		<img src="images/wall.png"/>
-	</div>
-</section>
- -->
 <div class="progress">
 	<div></div>
 </div>
