@@ -440,21 +440,46 @@
 			<li><code>if</code> &mdash; не стоит забывать о <code>{}</code>;</li>
 			<li><code>switch</code> &mdash; проваливается (лучше заменить на объект-стратегию);</li>
 			<li><code>for</code> &mdash; кеширование длины массива;</li>
-			<li><code>for-in</code> &mdash; протекает и не создан для массивов так как не гарантирует порядок прохода;</li>
+			<li><code>for-in</code> &mdash; протекает (помните о <code>obj.hasOwnProperty(prop)</code>);</li>
+			<li><code>for-in</code> &mdash; не создан для массивов так как не гарантирует порядок обхода;</li>
 			<li><code>with</code> &mdash; никогда не используйте!</li>
 		</ul>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Объекты</h2>
+		<p><strong>Объект</strong> &mdash; неупорядоченный набор именованных значений, хеш-таблица. Значения доступны по ключу. Ключ всегда только строка (даже пустая).</p>
+		<ul>
+			<li>объекты базового языка;</li>
+			<li>объекты среды выполнения;</li>
+			<li>пользовательские объекты.</li>
+		</ul>
+		<p><mark class="important">Никогда не меняйте свойства объектов базового языка и среды выполнения</mark>.</p>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Объекты</h2>
+		<p>Способы создания:</p>
+		<ul>
+			<li>литерал: <code>var obj = { prop1: value1, prop2: value2 }</code>;</li>
+			<li>функция-конструктор: <code>var obj = new Func()</code>.</li>
+		</ul>
+		<p>Доступ к свойствам:</p>
+		<ul>
+			<li><code>obj.prop1</code> // => value1;</li>
+			<li><code>obj['prop1']</code> // => value1.</li>
+		</ul>
+		<p>Удаление: оператор <code>delete</code> или присвоение <code>undefined</code>.</p>
 	</div>
 </section>
 
 <section class="slide">
 	<div>
 		<h2>Массивы</h2>
-	</div>
-</section>
-
-<section class="slide">
-	<div>
-		<h2>Объекты</h2>
 	</div>
 </section>
 
