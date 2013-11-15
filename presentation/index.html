@@ -59,12 +59,6 @@
 			<li>Вёрстка</li>
 			<li>JavaScript is Evil</li>
 			<li>Архитектура приложения</li>
-			<!--li>jQuery</li-->
-			<!--<li>Организация кода</li>
-			<li>Работа с DOM (Отделение логики от представления)</li>
-			<li>Коммуникация</li>
-			<li>Взаимодействие с сервером</li>
-			<li>Управление памятью</li>-->
 		</ol>
 	</div>
 </section>
@@ -246,7 +240,7 @@
 			<li><a href="http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/">OOCSS</a></li>
 			<li><a href="https://github.com/operatino/MCSS">MCSS</a></li>
 		</ul>
-		<p>Эти методологии пропагандируют верстку абсолютно независимыми блоками</p>		
+		<p>Эти методологии пропагандируют верстку абсолютно независимыми блоками</p>
 	</div>
 </section>
 
@@ -373,7 +367,7 @@
 		<h2>Типы данных: undefined</h2>
 		<p><strong>undefined</strong> &mdash; указывает на полное отсутствие какого-либо значения. </p>
 		<p>Оператор <code>typeof</code> для <code>undefined</code> вернет значение <code>"undefined"</code>.</p>
-		<p><code>null</code> следует понимать как неожиданное или ошибочное отсутствие значения.</p>
+		<p><code>undefined</code> следует понимать как неожиданное или ошибочное отсутствие значения.</p>
 		<p>В стандарте ECMAScript 3 <code>undefined</code> является переменной, которую можно было переопределить. В стандарте ECMAScript 5 <code>undefined</code> стала доступна только для чтения.</p>
 	</div>
 </section>
@@ -498,7 +492,7 @@
 		<h2>Массивы</h2>
 		<p><strong>length</strong> &mdash; длина массива. При присвоении свойствую <code>length</code> целого неотрицательного числа, меньшего, чем текущая длина массива, все элементы с индексами, большими или равными этому числу, удаляются из массива.</p>
 		<p>
-			Методы класса <code>Array</code>: <strong>join</strong> и <strong>split</strong>, <strong>splice</strong>, 
+			Методы класса <code>Array</code>: <strong>join</strong> и <strong>split</strong>, <strong>splice</strong>,
 			<strong>pop</strong> и <strong>push</strong>, <strong>shift</strong> и <strong>unshift</strong> и другие.
 		</p>
 		<p>Чтение несуществующего индекса вернет <code>undefined</code>.</p>
@@ -587,9 +581,9 @@
 			<code>		_name = name;</code>
 			<code>	}</code>
 			<code>	function getName(name) {</code>
-			<code>		return name;</code>
+			<code>		return _name;</code>
 			<code>	}</code>
-			<code>	return { setName: setName, getName, getName }</code>
+			<code>	return { setName: setName, getName: getName }</code>
 			<code>}</code>
 		</pre>
 	</div>
