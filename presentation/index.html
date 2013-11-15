@@ -477,15 +477,55 @@
 	</div>
 </section>
 
-<section class="slide">
+<section class="slide" lang="ru">
 	<div>
 		<h2>Массивы</h2>
+		<p><strong>Массив</strong> &mdash; упорядоченный набор значений. Наследуется от <code>Object</code>. Массив является объектом.</p>
+		<ul>
+			<li>не типизированы &mdash; значение элемента массива может быть любого типа.</li>
+			<li>динамическиe &mdash; могут изменять свою длину.</li>
+		</ul>
+		<p>Создание:</p>
+		<ul>
+			<li>литерал: <code>var arr = [0, '1', 2, '3']</code>;</li>
+			<li>функция-конструктор: <code>var arr = new Array().</code></li>
+		</ul>
 	</div>
 </section>
 
-<section class="slide">
+<section class="slide" lang="ru">
+	<div>
+		<h2>Массивы</h2>
+		<p><strong>length</strong> &mdash; длина массива. При присвоении свойствую <code>length</code> целого неотрицательного числа, меньшего, чем текущая длина массива, все элементы с индексами, большими или равными этому числу, удаляются из массива.</p>
+		<p>
+			Методы класса <code>Array</code>: <strong>join</strong> и <strong>split</strong>, <strong>splice</strong>, 
+			<strong>pop</strong> и <strong>push</strong>, <strong>shift</strong> и <strong>unshift</strong> и другие.
+		</p>
+		<p>Чтение несуществующего индекса вернет <code>undefined</code>.</p>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
 	<div>
 		<h2>Функции</h2>
+		<p>&mdash; это специальные объекты, которые можно выполнить. Поддерживают вложенность (nested functions).</p>
+		<p>Создание:</p>
+		<ul>
+			<li><strong>function declaration</strong>: <code>function f(args) {}</code>;</li>
+			<li><strong>function expression</strong>: <code>var f = function(args) {}</code>;</li>
+			<li><strong>anonymous function</strong>: <code>function(args) {}</code></li>
+		</ul>
+		<p>Функции могут быть вызваны как функции, как методы объекта, как конструкторы и косвенно, с помощью методов <code>call</code> и <code>apply</code>.</p>
+	</div>
+</section>
+
+<section class="slide" lang="ru">
+	<div>
+		<h2>Функции</h2>
+		<p>Функции обладают особыми аргументом <code>this</code>, который незаметно передается в функцию. В <code>this</code> хранится ссылка на объект, который вызвал функцию (контекст вызова).</p>
+		<p>Также функции обладают объектом <code>arguments</code>, который частично ведет себя как массив и хранит ссылку на текущую функцию <code>arguments.callee</code>.</p>
+		<p>Для приведения <code>arguments</code> к массиву используют следующий подход:</p>
+		<p><code>var args = Array.prototype.slice.call(arguments);</code></p>
 	</div>
 </section>
 
